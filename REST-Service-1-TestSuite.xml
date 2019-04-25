@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="4e738818-a931-4ce1-a24a-fb6b86da06b1" name="REST Service 1 TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:description>The test suite generated for the REST service [REST Service 1]</con:description><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="39c3b54b-d136-405a-8c50-e713f5dc1629" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="/v2/swagger.json TestCase" searchProperties="true" timeout="0"><con:description>The test case generated for the REST resource [/v2/swagger.json] located at [/v2/swagger.json]</con:description><con:settings/><con:testStep type="restrequest" name="GET Request" id="5a77c648-d6d5-4b7e-84de-2f324d3c9913"><con:settings/><con:config service="REST Service 1" resourcePath="/v2/swagger.json" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET Request" id="7004ebdf-17c2-43ce-b00c-448c3d065563" mediaType="application/json">
+          <con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Customr" value="Test"/>
+  &lt;con:entry key="Customr" value="Test"/>
+&lt;/xml-fragment></con:setting></con:settings>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request/><con:originalUri>https://petstore.swagger.io/v2/swagger.json</con:originalUri><con:credentials>
+            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/>
+        </con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite>
