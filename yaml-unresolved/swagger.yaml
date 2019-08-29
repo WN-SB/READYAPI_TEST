@@ -1,0 +1,1205 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Smart Search Management API",
+    "version" : "3.0.0",
+    "title" : "Search Management",
+    "x-ibm-name" : "management"
+  },
+  "basePath" : "/management/v3",
+  "tags" : [ ],
+  "schemes" : [ "https" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json", "application/javascript" ],
+  "security" : [ ],
+  "paths" : {
+    "/tags" : {
+      "get" : {
+        "operationId" : "get.tags",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/GetTagResponse"
+            }
+          }
+        }
+      },
+      "post" : {
+        "operationId" : "post.tags",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/PostTagResponse"
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "put.tags",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/PutTagResponse"
+            }
+          }
+        }
+      },
+      "delete" : {
+        "operationId" : "delete.tags",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      }, {
+        "$ref" : "#/definitions/tagRequest"
+      }, {
+        "in" : "body",
+        "name" : "tagRequest",
+        "description" : "tag attributes",
+        "required" : false,
+        "schema" : {
+          "$ref" : "#/definitions/tagRequest"
+        }
+      } ]
+    },
+    "/tag-types" : {
+      "get" : {
+        "operationId" : "get.tag-types",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/TagTypeResponse"
+            }
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      } ]
+    },
+    "/dealers" : {
+      "get" : {
+        "operationId" : "get.dealers",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/DealersResponse"
+            }
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      } ]
+    },
+    "/categories" : {
+      "get" : {
+        "operationId" : "get.categories",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/CategoryResponse"
+            }
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      } ]
+    },
+    "/navigation-types" : {
+      "get" : {
+        "operationId" : "get.navigation-types",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/NavigationTypeResponse"
+            }
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      } ]
+    },
+    "/items" : {
+      "get" : {
+        "operationId" : "get.items",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/ItemsResponse"
+            }
+          }
+        }
+      },
+      "put" : {
+        "operationId" : "put.items",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK",
+            "schema" : {
+              "$ref" : "#/definitions/ItemsResponse"
+            }
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      }, {
+        "$ref" : "#/parameters/din"
+      }, {
+        "$ref" : "#/definitions/itemRequest"
+      }, {
+        "in" : "body",
+        "name" : "itemRequest",
+        "description" : "item attributes",
+        "required" : false,
+        "schema" : {
+          "$ref" : "#/definitions/itemRequest"
+        }
+      } ]
+    },
+    "/itemLookup" : {
+      "get" : {
+        "operationId" : "get.itemLookup",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "200 OK"
+          }
+        }
+      },
+      "parameters" : [ {
+        "$ref" : "#/parameters/authorization"
+      }, {
+        "$ref" : "#/parameters/dealerId"
+      }, {
+        "$ref" : "#/parameters/searchDesc"
+      }, {
+        "$ref" : "#/parameters/search"
+      } ]
+    }
+  },
+  "securityDefinitions" : { },
+  "definitions" : {
+    "tagRequest" : {
+      "type" : "object",
+      "properties" : {
+        "description" : {
+          "type" : "string",
+          "example" : "Buying Guide",
+          "description" : "tag description"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "tag type"
+        },
+        "active" : {
+          "type" : "boolean",
+          "description" : "tag active indicator"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag start date"
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag end date"
+        },
+        "triggerA" : {
+          "type" : "array",
+          "description" : "an array of trigger A items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerB" : {
+          "type" : "array",
+          "description" : "an array of trigger B items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerC" : {
+          "type" : "array",
+          "description" : "an array of trigger C items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "attachments" : {
+          "type" : "array",
+          "description" : "an array of tag attachments",
+          "items" : {
+            "$ref" : "#/definitions/tagAttachments"
+          }
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "tagAttachments" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "tag attachment name"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "tag attachment description"
+        },
+        "terms" : {
+          "type" : "string",
+          "description" : "attachment terms"
+        },
+        "manufacturerSupplier" : {
+          "type" : "string",
+          "description" : "manufacture supplier"
+        },
+        "targetUrl" : {
+          "type" : "string",
+          "description" : "target url"
+        },
+        "campaignId" : {
+          "type" : "string",
+          "description" : "campaign id"
+        },
+        "campaignName" : {
+          "type" : "string",
+          "description" : "campaign name"
+        }
+      }
+    },
+    "triggerItems" : {
+      "properties" : {
+        "type" : {
+          "type" : "string",
+          "description" : "trigger type"
+        },
+        "value" : {
+          "type" : "string",
+          "description" : "trigger value"
+        }
+      }
+    },
+    "itemRequest" : {
+      "properties" : {
+        "dealerItemNumber" : {
+          "type" : "string",
+          "description" : "dealer item number"
+        },
+        "dealerUnitOfMeasure" : {
+          "type" : "string",
+          "description" : "unit of measure"
+        },
+        "dealerDescription" : {
+          "type" : "string",
+          "description" : "item description"
+        },
+        "dealerKeywords" : {
+          "type" : "string",
+          "description" : "item keywords"
+        },
+        "stockedItem" : {
+          "type" : "boolean",
+          "description" : "stock item indicator"
+        },
+        "itemIndicator" : {
+          "type" : "array",
+          "description" : "an array of item indicator",
+          "items" : {
+            "$ref" : "#/definitions/Indicators"
+          }
+        },
+        "categoryId" : {
+          "type" : "string",
+          "description" : "category id"
+        },
+        "itemImage" : {
+          "type" : "array",
+          "description" : "an array of item images",
+          "items" : {
+            "$ref" : "#/definitions/images"
+          }
+        },
+        "listPrice" : {
+          "type" : "number",
+          "format" : "double",
+          "description" : "list price"
+        },
+        "sequence" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "sequence"
+        },
+        "msdsUrl" : {
+          "type" : "string",
+          "description" : "msds url"
+        },
+        "suppliesItems" : {
+          "type" : "array",
+          "description" : "an array of supplies",
+          "items" : {
+            "$ref" : "#/definitions/references"
+          }
+        },
+        "accessoryItems" : {
+          "type" : "array",
+          "description" : "an array of accessories",
+          "items" : {
+            "$ref" : "#/definitions/references"
+          }
+        },
+        "familyMemberItems" : {
+          "type" : "array",
+          "description" : "an array of family member items",
+          "items" : {
+            "$ref" : "#/definitions/references"
+          }
+        }
+      }
+    },
+    "images" : {
+      "properties" : {
+        "imageURL" : {
+          "type" : "string",
+          "description" : "image url"
+        },
+        "imageCaption" : {
+          "type" : "string",
+          "description" : "image caption"
+        },
+        "imageHeight" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "image height"
+        },
+        "imageWidth" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "image width"
+        }
+      }
+    },
+    "references" : {
+      "properties" : {
+        "referenceType" : {
+          "type" : "string",
+          "description" : "reference type"
+        },
+        "referenceNumber" : {
+          "type" : "string",
+          "description" : "reference number"
+        }
+      }
+    },
+    "TagTypeResponse" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "tag name"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "tag description"
+        },
+        "display" : {
+          "type" : "string",
+          "description" : "tag display"
+        },
+        "attachmentAllowed" : {
+          "type" : "boolean",
+          "description" : "attachment allowed indicator"
+        }
+      }
+    },
+    "GetTagResponse" : {
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "tag id"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Buying Guide",
+          "description" : "tag description"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "tag type"
+        },
+        "active" : {
+          "type" : "boolean",
+          "description" : "tag active indicator"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag start date"
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag end date"
+        },
+        "triggerA" : {
+          "type" : "array",
+          "description" : "an array of trigger A items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerB" : {
+          "type" : "array",
+          "description" : "an array of trigger B items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerC" : {
+          "type" : "array",
+          "description" : "an array of trigger C items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "attachments" : {
+          "type" : "array",
+          "description" : "an array of tag attachments",
+          "items" : {
+            "$ref" : "#/definitions/tagAttachments"
+          }
+        }
+      }
+    },
+    "PostTagResponse" : {
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "tag id"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Buying Guide",
+          "description" : "tag description"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "tag type"
+        },
+        "active" : {
+          "type" : "boolean",
+          "description" : "tag active indicator"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag start date"
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag end date"
+        },
+        "triggerA" : {
+          "type" : "array",
+          "description" : "an array of trigger A items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerB" : {
+          "type" : "array",
+          "description" : "an array of trigger B items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerC" : {
+          "type" : "array",
+          "description" : "an array of trigger C items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "attachments" : {
+          "type" : "array",
+          "description" : "an array of tag attachments",
+          "items" : {
+            "$ref" : "#/definitions/tagAttachments"
+          }
+        }
+      }
+    },
+    "PutTagResponse" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "tag id"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Buying Guide",
+          "description" : "tag description"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "tag type"
+        },
+        "active" : {
+          "type" : "boolean",
+          "description" : "tag active indicator"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag start date"
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "tag end date"
+        },
+        "triggerA" : {
+          "type" : "array",
+          "description" : "an array of trigger A items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerB" : {
+          "type" : "array",
+          "description" : "an array of trigger B items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "triggerC" : {
+          "type" : "array",
+          "description" : "an array of trigger C items",
+          "items" : {
+            "$ref" : "#/definitions/triggerItems"
+          }
+        },
+        "attachments" : {
+          "type" : "array",
+          "description" : "an array of tag attachments",
+          "items" : {
+            "$ref" : "#/definitions/tagAttachments"
+          }
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "DealersResponse" : {
+      "type" : "object",
+      "properties" : {
+        "dealerName" : {
+          "type" : "string",
+          "description" : "dealer name"
+        },
+        "dealerId" : {
+          "type" : "string",
+          "description" : "dealer id"
+        },
+        "hierarchy" : {
+          "type" : "array",
+          "description" : "an array of hierarchy",
+          "items" : {
+            "$ref" : "#/definitions/Hierarchy"
+          }
+        },
+        "authorizedLists" : {
+          "type" : "array",
+          "description" : "a list of authorized list",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "emabledFeatures" : {
+          "type" : "array",
+          "description" : "a list of enabled features",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "orderNumber" : {
+          "type" : "string",
+          "description" : "order number"
+        },
+        "orderDate" : {
+          "type" : "string",
+          "description" : "order date"
+        },
+        "orderTypeId" : {
+          "type" : "string",
+          "description" : "order type id"
+        },
+        "orderQuantity" : {
+          "type" : "string",
+          "description" : "order quantity"
+        },
+        "shipToAccount" : {
+          "type" : "string",
+          "description" : "ship to account"
+        },
+        "soldToAccount" : {
+          "type" : "string",
+          "description" : "sold to account"
+        },
+        "additionalText" : {
+          "type" : "string",
+          "description" : "3PV name"
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "Hierarchy" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "description" : "hierarchy id"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "description"
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "Item" : {
+      "properties" : {
+        "dealerItemNumber" : {
+          "type" : "string",
+          "description" : "item number"
+        },
+        "dealerDescription" : {
+          "type" : "string",
+          "description" : "description"
+        }
+      }
+    },
+    "ItemsResponse" : {
+      "type" : "object",
+      "properties" : {
+        "items" : {
+          "type" : "array",
+          "description" : "an array of items",
+          "items" : {
+            "$ref" : "#/definitions/Item"
+          }
+        },
+        "status" : {
+          "type" : "string",
+          "example" : "success",
+          "description" : "a status message"
+        },
+        "perf" : {
+          "type" : "array",
+          "example" : "HDLR_TTL: 85",
+          "description" : "a list of performance measurements",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "NavigationTypeResponse" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "navigation type name"
+        },
+        "code" : {
+          "type" : "string",
+          "description" : "code"
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "description"
+        }
+      },
+      "additionalProperties" : { }
+    },
+    "CategoryResponse" : {
+      "type" : "object",
+      "required" : [ "id" ],
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "60285",
+          "description" : "a unique category id"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Staplers",
+          "description" : "the description of the category (describes this node only, not the full context)"
+        },
+        "subCategories" : {
+          "type" : "array",
+          "description" : "a list of subcategories for the category",
+          "items" : {
+            "$ref" : "#/definitions/CategoryL2"
+          }
+        }
+      },
+      "description" : "a category node",
+      "additionalProperties" : { }
+    },
+    "CategoryL2" : {
+      "properties" : {
+        "id" : {
+          "type" : "string",
+          "example" : "60285",
+          "description" : "a unique category id"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "Staplers",
+          "description" : "the description of the category (describes this node only, not the full context)"
+        }
+      }
+    },
+    "Indicators" : {
+      "type" : "object",
+      "properties" : {
+        "indicatorType" : {
+          "type" : "string",
+          "description" : "the type of indicator",
+          "enum" : [ "ANSI/BIFMA", "Assembly Required", "Contract Item", "EPACPG Compliant", "Green", "Hazmat", "Minority Vendor", "Non Returnable", "Recycled", "Small Package", "State Restriction", "Stocked", "Stocking Indicator", "ValuePack", "Warranty" ]
+        },
+        "indicatorValue" : {
+          "type" : "string",
+          "description" : "the value of the indicator"
+        }
+      },
+      "description" : "used to a represent a small set of item attribute common to most items which represent a limited number of states e.g. is item returnable yes/no",
+      "additionalProperties" : { }
+    }
+  },
+  "parameters" : {
+    "authorization" : {
+      "name" : "authorization",
+      "in" : "header",
+      "description" : "oauth token",
+      "required" : true,
+      "type" : "string"
+    },
+    "callback" : {
+      "name" : "callback",
+      "in" : "query",
+      "description" : "callback function name if using jsonp",
+      "required" : false,
+      "type" : "string"
+    },
+    "dealerId" : {
+      "name" : "dealerId",
+      "in" : "header",
+      "description" : "dealer id",
+      "required" : false,
+      "type" : "string"
+    },
+    "din" : {
+      "name" : "din",
+      "in" : "query",
+      "description" : "dealer item number",
+      "required" : false,
+      "type" : "string"
+    },
+    "searchDesc" : {
+      "name" : "searchDesc",
+      "in" : "query",
+      "description" : "search description",
+      "required" : false,
+      "type" : "boolean"
+    },
+    "search" : {
+      "name" : "search",
+      "in" : "query",
+      "description" : "search keyword",
+      "required" : false,
+      "type" : "string"
+    },
+    "id" : {
+      "name" : "id",
+      "in" : "query",
+      "description" : "id",
+      "required" : false,
+      "type" : "string"
+    }
+  },
+  "x-ibm-configuration" : {
+    "testable" : true,
+    "enforced" : true,
+    "cors" : {
+      "enabled" : true
+    },
+    "assembly" : {
+      "execute" : [ {
+        "gatewayscript" : {
+          "title" : "derive api endpoints",
+          "version" : "1.0.0",
+          "source" : "var hostname = apim.getvariable('api.endpoint.hostname');\nvar apiurl = apim.getvariable('api.properties.ess_mgmt_api_endpoint');\nvar datapowerport = apim.getvariable('ess_datapower_port');\nvar apioperationid = apim.getvariable('api.operation.id');\n\nif (hostname==='dev2-api.essendant.com' || hostname==='dev2-internal-api.essendant.com') {\n    apiurl = apim.getvariable('api.properties.ess_dev_mgmt_api_endpoint');\n    datapowerport = apim.getvariable('ess_dev_datapower_port');\n} else if (hostname==='qas2-api.essendant.com' || hostname==='qas2-internal-api.essendant.com') {\n    apiurl = apim.getvariable('api.properties.ess_qas_mgmt_api_endpoint');\n} else if (hostname==='ppd2-api.essendant.com' || hostname==='ppd2-internal-api.essendant.com') {\n    apiurl = apim.getvariable('api.properties.ess_ppd_mgmt_api_endpoint');\n} else if (hostname==='api.essendant.com' || hostname==='internal-api.essendant.com') {\n    apiurl = apim.getvariable('api.properties.ess_mgmt_api_endpoint');\n}\n\napim.setvariable('ess_apiurl', apiurl);\napim.setvariable('ess_datapower_port', datapowerport);",
+          "description" : "Derive the ss api endpoint and auth api endpoint based on api host name"
+        }
+      }, {
+        "gatewayscript" : {
+          "title" : "set datapower information",
+          "version" : "1.0.0",
+          "source" : "var xforwardedfor = apim.getvariable('request.headers.x-forwarded-for');\n\napim.setvariable('message.headers.X-Forwarded-For', xforwardedfor);\n\nvar localServiceAddress = apim.getvariable('api.endpoint.address');\n\nvar datapowerport = apim.getvariable('ess_datapower_port');\n\napim.setvariable('message.headers.localServiceAddress', localServiceAddress + ':' + datapowerport);\n\nvar dealerId = apim.getvariable('request.headers.dealerid');\n\napim.setvariable('message.headers.userID', dealerId); \n\napim.setvariable('message.headers.ESS_DealerID', dealerId);\n\n// TODO: chane it to the proper security resource\napim.setvariable('message.headers.operationID', 'getManagementRequest');\n\n//apim.setvariable('message.headers.Authorization', 'Basic U29sckQxOnBhc3N3b3Jk');\n\nvar token = apim.getvariable('request.headers.authorization');\n\napim.setvariable('message.headers.Authorization', token);"
+        }
+      }, {
+        "gatewayscript" : {
+          "title" : "set request id",
+          "version" : "1.0.0",
+          "source" : "var id = apim.getvariable('request.parameters.id');\n\napim.setvariable('id', id);"
+        }
+      }, {
+        "switch" : {
+          "title" : "switch",
+          "case" : [ {
+            "condition" : "(request.verb==='OPTIONS')",
+            "execute" : [ {
+              "gatewayscript" : {
+                "title" : "gatewayscript",
+                "version" : "1.0.0",
+                "source" : "var requestOrigin =  apim.getvariable('request.headers.origin');\n\nvar requestHeaders =  apim.getvariable('request.headers.access-control-request-headers');\n\napim.setvariable('message.headers.Access-Control-Allow-Origin' , requestOrigin);\n\napim.setvariable('message.headers.Access-Control-Allow-Methods', 'GET, OPTIONS, PUT, POST, DELETE, PARAMETERS');\n\napim.setvariable('message.headers.Access-Control-Allow-Headers', requestHeaders);\n\napim.setvariable('message.headers.Access-Control-Max-Age', 86400);\n"
+              }
+            } ]
+          }, {
+            "otherwise" : [ {
+              "switch" : {
+                "title" : "Proxy operation to correct URL",
+                "case" : [ {
+                  "condition" : "(api.operation.id==='get.tags')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "\nvar id = apim.getvariable('id');\n\nif (id) {\n    apim.setvariable('tagOperation', '/id/' + id);\n} else {\n    apim.setvariable('tagOperation', '');\n}"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "get tags",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/tags$(tagOperation)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='post.tags')",
+                  "execute" : [ {
+                    "proxy" : {
+                      "title" : "create tag",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/tags",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='put.tags')",
+                  "execute" : [ {
+                    "proxy" : {
+                      "title" : "update tag",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/tags/id/$(id)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='delete.tags')",
+                  "execute" : [ {
+                    "proxy" : {
+                      "title" : "delete tag",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/tags/id/$(id)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.tag-types')",
+                  "execute" : [ {
+                    "proxy" : {
+                      "title" : "get tag types",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/tag-types",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.dealers')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "var id = apim.getvariable('id');\n\nif (id) {\n    apim.setvariable('dealerOperation', '/id/' + id);\n} else {\n    apim.setvariable('dealerOperation', '');\n}"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "get dealers",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/dealers$(dealerOperation)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.categories')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "var id = apim.getvariable('id');\n\nif (id) {\n    apim.setvariable('categoriesOperation', '/id/' + id);\n} else {\n    apim.setvariable('categoriesOperation', '');\n}"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "get categories",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/categories$(categoriesOperation)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.navigation-types')",
+                  "execute" : [ {
+                    "proxy" : {
+                      "title" : "get navigation types",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/navigation-types",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.items')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "\nvar din = apim.getvariable('request.parameters.din');\n\nif (din) {\n    apim.setvariable('itemsOperation', '/din/' + din);\n} else {\n    apim.setvariable('itemsOperation', '');\n}"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "get items",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/items$(itemsOperation)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='put.items')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "\nvar din = apim.getvariable('request.parameters.din');\n\napim.setvariable('din', din);\n"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "update items",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/items/din/$(din)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                }, {
+                  "condition" : "(api.operation.id==='get.itemLookup')",
+                  "execute" : [ {
+                    "gatewayscript" : {
+                      "title" : "set api variables",
+                      "version" : "1.0.0",
+                      "source" : "\nvar searchDesc = apim.getvariable('request.parameters.searchDesc');\n\napim.setvariable('searchDesc', searchDesc);\n\nvar search = apim.getvariable('request.parameters.search');\n\napim.setvariable('search', search);\n"
+                    }
+                  }, {
+                    "proxy" : {
+                      "title" : "item lookup",
+                      "timeout" : 60,
+                      "verb" : "keep",
+                      "cache-response" : "protocol",
+                      "cache-ttl" : 900,
+                      "version" : "1.0.0",
+                      "target-url" : "$(ess_apiurl)/itemLookup?dealerId=$(message.headers.ESS_DealerID)&searchDesc=$(searchDesc)&search=$(search)",
+                      "output" : "ess_response"
+                    }
+                  } ]
+                } ],
+                "version" : "1.0.0"
+              }
+            } ]
+          } ],
+          "version" : "1.0.0"
+        }
+      } ],
+      "catch" : [ {
+        "default" : [ {
+          "gatewayscript" : {
+            "title" : "error handling",
+            "version" : "1.0.0",
+            "source" : "// add error handling"
+          }
+        } ]
+      } ]
+    },
+    "gateway" : "datapower-gateway",
+    "properties" : {
+      "ess_dev_datapower_port" : {
+        "value" : "20302",
+        "description" : "",
+        "encoded" : false
+      },
+      "ess_datapower_port" : {
+        "value" : "21302",
+        "description" : "",
+        "encoded" : false
+      },
+      "ess_mgmt_api_endpoint" : {
+        "value" : "https://prd1-mgmt-api.essendant.com/management-api/api",
+        "description" : "",
+        "encoded" : false
+      },
+      "ess_dev_mgmt_api_endpoint" : {
+        "value" : "https://dev2-mgmt-api.essendant.com/management-api/api",
+        "description" : "",
+        "encoded" : false
+      },
+      "ess_qas_mgmt_api_endpoint" : {
+        "value" : "https://qas2-mgmt-api.essendant.com/management-api/api",
+        "description" : "",
+        "encoded" : false
+      },
+      "ess_ppd_mgmt_api_endpoint" : {
+        "value" : "https://ppd2-mgmt-api.essendant.com/management-api/api",
+        "description" : "",
+        "encoded" : false
+      }
+    },
+    "catalogs" : { },
+    "phase" : "realized"
+  }
+}
